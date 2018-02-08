@@ -3,6 +3,7 @@ Project Making Noise
 This tutorial will show you how to build musical network by using 3 ESP8266 MCU. One acts as control server and the reset is capable of various joint movement to fit your instrument need. 
 
 <img width="600" alt="Setup" src="https://ibb.co/cNmiac">
+
 ## The Demo:
 
 Press CC to see our description of demo
