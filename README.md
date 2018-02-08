@@ -46,9 +46,10 @@ They either have touch sensor or gyro-accelerometer sensor to allow manual contr
 <img width="600" alt="Setup" src="https://github.com/mqc25/EE183/blob/master/img/Servo2-Schematic.png">
 
 - Use 1 NodeMCU leftover to set up server to control the rest.
-- Tie your choice of stick to the top motor.
-- Adjust your rhythm of choice
-- Enjoy. Be creative
+- Mount your choice of stick to the top motor.
+- Attach servo to stable ground for better swing quality.
+- Adjust your rhythm of choice as software description below.
+- Enjoy! Be creative!
 
 #### Note on servo calibration:
 
