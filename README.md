@@ -38,11 +38,9 @@ The hardware setup:
 
 The server will set up the access point for the rest of the system to connect to and receive command from. User can connect to this server via browser and choose the option available on the screen include:
 
-	- Manual: Control the swing of servo via touch sensor or gyro sensor.
-
-	- Play_song_(1/2/3) (for 1st or 2nd node): Each node has a preset song rhythm built in that can be play individually
-
-	- Collab: The two node play together, 1 will play first then signal other to play via gyro and touch sensor then both play together.
+- Manual: Control the swing of servo via touch sensor or gyro sensor.
+- Play_song_(1/2/3) (for 1st or 2nd node): Each node has a preset song rhythm built in that can be play individually
+- Collab: The two node play together, 1 will play first then signal other to play via gyro and touch sensor then both play together.
 		
 The Node: has 2 or 3 servos. One serve as base to adjust the angle, the other to swing to play a node. They either have touch sensor or gyro to allow manual control and collaboration.
 	
@@ -51,18 +49,14 @@ Software setup:
 Necessary library:
 
 ESP8266WiFi.h
-
 ESP8266HTTPClient.h
-
 WiFiClient.h
-
 ESP8266WebServer.h
-
 Servo.h
 
 -Calibrate the servo:
 
-	It is important to calibrate the servo so one can swing to signal others as well as making a stable ground for servo to stand on. The angle of swing will be determined by your instrument of choice and the sound you want to make. Play with it. Be creative. 
+It is important to calibrate the servo so one can swing to signal others as well as making a stable ground for servo to stand on. The angle of swing will be determined by your instrument of choice and the sound you want to make. Play with it. Be creative. 
 	
 
 
