@@ -4,6 +4,12 @@ This tutorial will show you how to build musical network by using 3 ESP8266 MCU.
 
 <img width="600" alt="Setup" src="https://github.com/mqc25/EE183/blob/master/img/IMG_20180207_235736.jpg">
 
+## Team Member:
+
+- Cuong Hoang - 004847900
+- Khoi Luc - 104570581
+- Minh Cao	- 804844568
+
 ## The Demo:
 
 Press CC to see our description of demo
@@ -99,8 +105,8 @@ s += "<br><br><br>";
 **Client:** 
 - Add new song:
 ```
-int newsong11[]={<int>,...}; 				//	#of time to hit the drum at current pos
-int newsong12[]={<angle>,...};				//	angle of swing 1=120, 2 = 90, 3 = 45
+int newsong1[]={<int>,...}; 				//	#of time to hit the drum at current pos
+int newsong2[]={<angle>,...};				//	angle of swing 1=120, 2 = 90, 3 = 45
 
 void playnewsong() // play newsong function		
 {
@@ -110,7 +116,7 @@ void playnewsong() // play newsong function
       play(newsong1[i], newsong2[i]);
        delay(30);
     }
-    Serial.println("DONE song 1");
+    Serial.println("DONE newsong");
     stopservo();
  }
  
