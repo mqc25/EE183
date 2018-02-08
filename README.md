@@ -79,14 +79,14 @@ const int port2 = <port_number>;					// client 2 port
 
 - Additional options at server can be added as follow:
 
--- Adding option to webpage
+-- Adding option to webpage:
 ```
 s += "<br><input type=\"button\" name=\"b1\" value=\"Manual\"";
 s += " onclick=\"location.href='/MANUAL'\">";
 s += "<br><br><br>";
 ```
 
--- Adding option to server
+-- Adding option to server:
 ```
  else if (request.indexOf("/NEW_OPTION") != -1)
   {
@@ -96,3 +96,29 @@ s += "<br><br><br>";
   }
 ```
 
+**Client:** 
+- Add new song:
+```
+int newsong11[]={<int>,...}; 				//	#of time to hit the drum at current pos
+int newsong12[]={<angle>,...};				//	angle of swing 1=120, 2 = 90, 3 = 45
+
+void playnewsong() // play newsong function		
+{
+  start();
+  for(int i = 0; i < sizeof(newsong)/sizeof(newsong[0]); i++)
+    {
+      play(newsong1[i], newsong2[i]);
+       delay(30);
+    }
+    Serial.println("DONE song 1");
+    stopservo();
+ }
+ 
+void decide(bool manFlag, String msg){		// add this song to new option id from server
+  ...
+  else if(msg=="<song_num>"){
+    playnewsong();
+  }
+  ...
+}
+```
