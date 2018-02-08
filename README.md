@@ -68,12 +68,14 @@ Description of code functionality available in code file.
 **Server:** 
 - Network id, password, client and user port number can be changed at the beginning of the code:
 
-```const char* ssid = "TellMeNow2";							// AP ssid
-const char* password = "notsogoodisntit";					// AP password
+```
+const char* ssid = "<new_ssid>";					// AP ssid
+const char* password = "<password>";				// AP password
 
-const int port = 80;
-const int port1 = 90;
-const int port2 = 100;```
+const int port = <port_number>;						// web browser port
+const int port1 = <port_number>;					// client 1 port
+const int port2 = <port_number>;					// client 2 port
+```
 
 - Additional options at server can be added as follow:
 
