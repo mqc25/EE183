@@ -41,14 +41,14 @@ The Node: has 2 or 3 servos. One serve as base to adjust the angle, the other to
 ## Software setup:
 
 #### Necessary library:
--ESP8266WiFi.h
--ESP8266HTTPClient.h
--WiFiClient.h
--ESP8266WebServer.h
--Servo.h
--MPU6050.h
--Wire.h
--I2C-dev.h
+- ESP8266WiFi.h
+- ESP8266HTTPClient.h
+- WiFiClient.h
+- ESP8266WebServer.h
+- Servo.h
+- MPU6050.h
+- Wire.h
+- I2C-dev.h
 
 #### Calibrate the servo:
 
