@@ -120,7 +120,7 @@ void playnewsong() // play newsong function
     stopservo();
  }
  
-void decide(bool manFlag, String msg){		// add this song to new option id from server
+void decide(bool manFlag, String msg){		// assign this song to an id from server
   ...
   else if(msg=="<song_num>"){
     playnewsong();
