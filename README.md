@@ -111,7 +111,7 @@ s += "<br><br><br>";
 - Add new song:
 ```
 int newsong1[]={<hit_num>,...}; 				//	#of time to hit the drum at current pos
-int newsong2[]={<angle>,...};				//	angle of swing 1=120, 2 = 90, 3 = 45
+int newsong2[]={<angle>,...};					//	angle of swing 1=120, 2 = 90, 3 = 45
 								// 	the two array must have same size
 
 void playnewsong() // play newsong function		
