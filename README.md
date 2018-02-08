@@ -19,13 +19,17 @@ Press CC to see our description of demo
 
 ## Basic functionality:
 
-The server will set up the access point for the rest of the system to connect to and receive command from. User can connect to this server via browser and choose the option available on the screen include:
+This a musical band WiFi-network that has one MCU act as control server that provide user interface option on webpage and send command to clients accordingly 
+depend on user inputs. 
 
+Available options are:
 - **Manual**: Control the swing of servo via touch sensor or gyro sensor.
 - **Play_song_(1/2/3)** (for 1st or 2nd node): Each node has a preset song rhythm built in that can be play individually
 - **Collaborate**: The two node play together, 1 will play first then signal other to play via gyro and touch sensor then both play together.
 		
-The Node: has 2 or 3 servos. One serve as base to adjust the angle, the other to swing to play a node. They either have touch sensor or gyro to allow manual control and collaboration.
+This project current has 1 server and 2 clients. One with 2 servos and one with 3 servos. One serves as the base to adjust the angle
+while the others to swing touch pen to play a node. 
+They either have touch sensor or gyro-accelerometer sensor to allow manual control and collaboration.
 	
 ## Hardware Setup:
 
