@@ -6,6 +6,8 @@ This tutorial will show you how to build musical network by using 3 ESP8266 MCU.
 
 ## The Demo:
 
+Press CC to see our description of demo
+
 https://www.youtube.com/watch?v=8fS7rfw3ZuM
 
 ## Bill of Materials:
