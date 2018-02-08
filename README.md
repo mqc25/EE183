@@ -31,9 +31,9 @@ The Node: has 2 or 3 servos. One serve as base to adjust the angle, the other to
 
 - Connect the circuit as shown below:
 
-<img width="600" alt="Setup" src="https://ibb.co/jVc0MH">
+<img width="600" alt="Setup" src="https://github.com/mqc25/EE183/blob/master/Servo1-Schematic.png">
 
-<img width="600" alt="Setup" src="https://ibb.co/g0fn1H">
+<img width="600" alt="Setup" src="https://github.com/mqc25/EE183/blob/master/Servo2-Schematic.png">
 
 - Use 1 NodeMCU leftover to set up server to control the rest.
 - Tie your choice of stick to the top motor.
