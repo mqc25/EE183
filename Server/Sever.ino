@@ -3,13 +3,12 @@
 #include <ESP8266WebServer.h>
 
 //          format request
-//          /khoi/request            lay command tiep theo
-//          /khoi/done                bao xong roi
-//          /cuong/request           lay command tiep theo
-//          /cuong/done               bao xong roi
+//          /khoi/done            
+//          /cuong/done         
 
-const char* ssid = "TellMeNow2";
-const char* password = "notsogoodisntit";
+
+const char* ssid = "TellMeNow2";							// AP ssid
+const char* password = "notsogoodisntit";					// AP password
 
 const int port = 80;
 const int port1 = 90;
@@ -26,32 +25,23 @@ String khoicommand[2] = {"auto0","auto0"};
 String cuongcommand[2] = {"auto0","auto0"};
 
 WiFiServer server(port);
-ESP8266WebServer server1(port1);
-ESP8266WebServer server2(port2);
+ESP8266WebServer server1(port1); 	// 
+ESP8266WebServer server2(port2);	// init client response 
 
 void khoiRequest() {
-  server1.send(200, "text/plain", khoicommand[khoiCounter].c_str());
+  server1.send(200, "text/plain", khoicommand[khoiCounter].c_str());		// send command to client
   if(++khoiCounter == sizeof(khoicommand)/sizeof(khoicommand[0]) ){
     khoiCounter = 0; 
-	khoicommand[1] = "auto0";
-  }
+	khoicommand[1] = "auto0";												// reset previous command
+  }	
   
 }
 void cuongRequest() {
-   server2.send(200, "text/plain", cuongcommand[cuongCounter].c_str());
+   server2.send(200, "text/plain", cuongcommand[cuongCounter].c_str());		// send command to client
   if(++cuongCounter == sizeof(cuongcommand)/sizeof(cuongcommand[0]) ){
     cuongCounter = 0; 
-    cuongcommand[1] = "auto0";
+    cuongcommand[1] = "auto0";												// reset previous command
   }
-}
-
-void khoiDone(){
-  server1.send(200, "text/plain", "ok");
-  kd = true;
-}
-void cuongDone(){
-  server1.send(200, "text/plain", "ok");
-  kd = true;
 }
 
 
@@ -61,26 +51,27 @@ void setup() {
   Serial.println();
   Serial.print("Configuring access point...");
   /* You can remove the password parameter if you want the AP to be open. */
-  WiFi.softAP(ssid, password);
+  WiFi.softAP(ssid, password);				// Set up AP 
 
-  IPAddress myIP = WiFi.softAPIP();
+  IPAddress myIP = WiFi.softAPIP();			
   Serial.print("AP IP address: ");
   Serial.println(myIP);
   
-  server1.on("/khoi/done", khoiRequest);
-  server1.begin();
-  
-  server2.on("/cuong/done", cuongRequest);
-  server2.begin();
+  server1.on("/khoi/done", khoiRequest);			//
+  server1.begin();									//
+	
+  server2.on("/cuong/done", cuongRequest);			// setup node response
+  server2.begin();									//
 
-  server.begin();
-  Serial.println("HTTP server started");
+  server.begin();									// setup http web server response
+  Serial.println("HTTP server started");			//
 }
 
 void loop() {
-  server1.handleClient();
-  server2.handleClient();
-  WiFiClient client = server.available();
+  server1.handleClient();							//
+  server2.handleClient();							//	deal with request from client node
+  
+  WiFiClient client = server.available();			// deal with request from webserver
   if (!client) 
   { 
     return; 
@@ -150,7 +141,7 @@ void loop() {
 
   }
   
-  // Prepare the HTML document to respond and add buttons:
+  // Prepare the HTML document to print to user browser 
   String s = "HTTP/1.1 200 OK\r\n";
   s += "Content-Type: text/html\r\n\r\n";
   s += "<!DOCTYPE HTML>\r\n<html>\r\n";
@@ -198,6 +189,6 @@ void loop() {
   //Serve the HTML document to the browser.
   client.flush(); //clear previous info in the stream
   client.print(s); // Send the response to the client
-  delay(1);
-  Serial.println("Client disonnected"); //Looking under the hood
+  delay(10);
+  Serial.println("Client disonnected"); 
 }
