@@ -2,12 +2,10 @@
 Project Making Noise
 This tutorial will show you how to build musical network by using 3 ESP8266 MCU. One acts as control server and the reset is capable of various joint movement to fit your instrument need. 
 
--Youtube video of Project Knock Knock:
-
-The Demo:
+## The Demo:
 https://www.youtube.com/watch?v=JHrq-9Khh3g&feature=youtu.be
 
--Bill of Materials:
+## Bill of Materials:
 
 3 x ESP8266 MCU
 Micro-USB Cable
@@ -15,7 +13,7 @@ Micro-USB Cable
 3 x Touch pen
 Instrument of choice (preferable in touch interactive device)
 
--Hardware Setup:
+## Hardware Setup:
 
 <img width="600" alt="Setup" src="https://lh3.googleusercontent.com/VWxzDHX61RsxMMQo7rjCCxD3M2E2jWBcPZGfkZnL5RRZiFjHCAllXDE7YDfRXlberTCdNVw5wrwiYfdAH3R5oH7PL7wSzXjFQ0bjni3H8MNJhrTZhB8i8AttNwDhi5rcJwVqh4KXOlp4NwezA11J2VGTCGaPO7dMJR460b7px_tMnsgwlkuzgPN9CMOtyV4N86hQNIJYwFKUVPP78mOUCUu6yo4B2miesTur7S8DS6MZG-T0K8SSI5mHMy1ztEqmiF3K0ChPUBixU0DnBabXI8xsNyYiYM5uvNB0gBabzvnAQLEiUZ1fkuVr9JdWfVzS4ELTqHCpElxbI4E0ios7iUbXx-Jwzwho-QMeF4vOOTcoLIo4yxyZ8eBTG52N50y9QIGWR4BLPqf_MyKqIL5RE0CV-vTi8tCqehdzLxLI0cyAo8lYMQUNYw5XkxNRlLdlKIcP8ZnE1Ev7PWjl86cW48O3Hm5fxifj0ZSJFglJemfShRLMb7IspPq9wNbOIQN8I8gi00y8C9rT1_30ZgrTnFaUNY_xpjSznOeOv5XmFX5ac8jqLn1O-nKXzwMTrYvnnRG1JG_A1MMxBFBwAZ2DueKzhrt9a9kmijd7iiQ=w818-h613-no">
 The hardware setup:
@@ -44,9 +42,9 @@ The server will set up the access point for the rest of the system to connect to
 		
 The Node: has 2 or 3 servos. One serve as base to adjust the angle, the other to swing to play a node. They either have touch sensor or gyro to allow manual control and collaboration.
 	
-Software setup:
+## Software setup:
 
-Necessary library:
+#### Necessary library:
 
 ESP8266WiFi.h
 ESP8266HTTPClient.h
@@ -54,7 +52,7 @@ WiFiClient.h
 ESP8266WebServer.h
 Servo.h
 
--Calibrate the servo:
+#### Calibrate the servo:
 
 It is important to calibrate the servo so one can swing to signal others as well as making a stable ground for servo to stand on. The angle of swing will be determined by your instrument of choice and the sound you want to make. Play with it. Be creative. 
 	
