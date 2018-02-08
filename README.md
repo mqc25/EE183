@@ -2,6 +2,8 @@
 Project Making Noise
 This tutorial will show you how to build musical network by using 3 ESP8266 MCU. One acts as control server and the reset is capable of various joint movement to fit your instrument need. 
 
+<img width="600" alt="Setup" src="https://lh3.googleusercontent.com/VWxzDHX61RsxMMQo7rjCCxD3M2E2jWBcPZGfkZnL5RRZiFjHCAllXDE7YDfRXlberTCdNVw5wrwiYfdAH3R5oH7PL7wSzXjFQ0bjni3H8MNJhrTZhB8i8AttNwDhi5rcJwVqh4KXOlp4NwezA11J2VGTCGaPO7dMJR460b7px_tMnsgwlkuzgPN9CMOtyV4N86hQNIJYwFKUVPP78mOUCUu6yo4B2miesTur7S8DS6MZG-T0K8SSI5mHMy1ztEqmiF3K0ChPUBixU0DnBabXI8xsNyYiYM5uvNB0gBabzvnAQLEiUZ1fkuVr9JdWfVzS4ELTqHCpElxbI4E0ios7iUbXx-Jwzwho-QMeF4vOOTcoLIo4yxyZ8eBTG52N50y9QIGWR4BLPqf_MyKqIL5RE0CV-vTi8tCqehdzLxLI0cyAo8lYMQUNYw5XkxNRlLdlKIcP8ZnE1Ev7PWjl86cW48O3Hm5fxifj0ZSJFglJemfShRLMb7IspPq9wNbOIQN8I8gi00y8C9rT1_30ZgrTnFaUNY_xpjSznOeOv5XmFX5ac8jqLn1O-nKXzwMTrYvnnRG1JG_A1MMxBFBwAZ2DueKzhrt9a9kmijd7iiQ=w818-h613-no">
+
 ## The Demo:
 https://www.youtube.com/watch?v=JHrq-9Khh3g&feature=youtu.be
 
@@ -10,12 +12,19 @@ https://www.youtube.com/watch?v=JHrq-9Khh3g&feature=youtu.be
 - Micro-USB Cable
 - 5 x Servo Motor
 - 3 x Touch pen
-- Instrument of choice (preferable in touch interactive device)
+- Instrument of choice (preferable touch interactive device)
 
+## Basic functionality:
+
+The server will set up the access point for the rest of the system to connect to and receive command from. User can connect to this server via browser and choose the option available on the screen include:
+
+- **Manual**: Control the swing of servo via touch sensor or gyro sensor.
+- **Play_song_(1/2/3)** (for 1st or 2nd node): Each node has a preset song rhythm built in that can be play individually
+- **Collaborate**: The two node play together, 1 will play first then signal other to play via gyro and touch sensor then both play together.
+		
+The Node: has 2 or 3 servos. One serve as base to adjust the angle, the other to swing to play a node. They either have touch sensor or gyro to allow manual control and collaboration.
+	
 ## Hardware Setup:
-
-<img width="600" alt="Setup" src="https://lh3.googleusercontent.com/VWxzDHX61RsxMMQo7rjCCxD3M2E2jWBcPZGfkZnL5RRZiFjHCAllXDE7YDfRXlberTCdNVw5wrwiYfdAH3R5oH7PL7wSzXjFQ0bjni3H8MNJhrTZhB8i8AttNwDhi5rcJwVqh4KXOlp4NwezA11J2VGTCGaPO7dMJR460b7px_tMnsgwlkuzgPN9CMOtyV4N86hQNIJYwFKUVPP78mOUCUu6yo4B2miesTur7S8DS6MZG-T0K8SSI5mHMy1ztEqmiF3K0ChPUBixU0DnBabXI8xsNyYiYM5uvNB0gBabzvnAQLEiUZ1fkuVr9JdWfVzS4ELTqHCpElxbI4E0ios7iUbXx-Jwzwho-QMeF4vOOTcoLIo4yxyZ8eBTG52N50y9QIGWR4BLPqf_MyKqIL5RE0CV-vTi8tCqehdzLxLI0cyAo8lYMQUNYw5XkxNRlLdlKIcP8ZnE1Ev7PWjl86cW48O3Hm5fxifj0ZSJFglJemfShRLMb7IspPq9wNbOIQN8I8gi00y8C9rT1_30ZgrTnFaUNY_xpjSznOeOv5XmFX5ac8jqLn1O-nKXzwMTrYvnnRG1JG_A1MMxBFBwAZ2DueKzhrt9a9kmijd7iiQ=w818-h613-no">
-The hardware setup:
 
 - Connect the circuit as shown below:
 
@@ -28,16 +37,6 @@ The hardware setup:
 - Adjust your rhythm of choice
 - Enjoy. Be creative
 
-## Basic functionality:
-
-The server will set up the access point for the rest of the system to connect to and receive command from. User can connect to this server via browser and choose the option available on the screen include:
-
-- Manual: Control the swing of servo via touch sensor or gyro sensor.
-- Play_song_(1/2/3) (for 1st or 2nd node): Each node has a preset song rhythm built in that can be play individually
-- Collaborate: The two node play together, 1 will play first then signal other to play via gyro and touch sensor then both play together.
-		
-The Node: has 2 or 3 servos. One serve as base to adjust the angle, the other to swing to play a node. They either have touch sensor or gyro to allow manual control and collaboration.
-	
 ## Software setup:
 
 #### Necessary library:
