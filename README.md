@@ -27,7 +27,7 @@ Available options are:
 - **Play_song_(1/2/3)** (for 1st or 2nd node): Each node has a preset song rhythm built in that can be play individually
 - **Collaborate**: The two node play together, 1 will play first then signal other to play via gyro and touch sensor then both play together.
 		
-This project current has 1 server and 2 clients. One with 2 servos and one with 3 servos. One serves as the base to adjust the angle
+This project currently has 1 server and 2 clients. One with 2 servos and one with 3 servos. One serves as the base to adjust the angle
 while the others to swing touch pen to play a node. 
 They either have touch sensor or gyro-accelerometer sensor to allow manual control and collaboration.
 	
@@ -44,9 +44,16 @@ They either have touch sensor or gyro-accelerometer sensor to allow manual contr
 - Adjust your rhythm of choice
 - Enjoy. Be creative
 
+#### Note on servo calibration:
+
+It is important to calibrate the servo so one can swing to signal others as well as making a stable ground for servo to stand on. 
+The angle of swing will be determined by your instrument of choice and the sound you want to make. Play with it. Be creative. 
+	
 ## Software setup:
 
-#### Necessary library:
+Description of code functionality available in code file. 
+
+#### Necessary library for this project:
 - ESP8266WiFi.h
 - ESP8266HTTPClient.h
 - WiFiClient.h
@@ -56,9 +63,34 @@ They either have touch sensor or gyro-accelerometer sensor to allow manual contr
 - Wire.h
 - I2Cdev.h
 
-#### Calibrate the servo:
+#### Note on coding option:
 
-It is important to calibrate the servo so one can swing to signal others as well as making a stable ground for servo to stand on. The angle of swing will be determined by your instrument of choice and the sound you want to make. Play with it. Be creative. 
-	
+**Server:** 
+- Network id, password, client and user port number can be changed at the beginning of the code:
 
+```const char* ssid = "TellMeNow2";							// AP ssid
+const char* password = "notsogoodisntit";					// AP password
+
+const int port = 80;
+const int port1 = 90;
+const int port2 = 100;```
+
+- Additional options at server can be added as follow:
+
+-- Adding option to webpage
+```
+s += "<br><input type=\"button\" name=\"b1\" value=\"Manual\"";
+s += " onclick=\"location.href='/MANUAL'\">";
+s += "<br><br><br>";
+```
+
+-- Adding option to server
+```
+ else if (request.indexOf("/NEW_OPTION") != -1)
+  {
+    Serial.println("NEW_OPTION");
+    clientcommand[1] = "<auto/manual><option_num>";
+
+  }
+```
 
