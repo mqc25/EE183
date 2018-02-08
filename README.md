@@ -8,8 +8,8 @@ The Demo:
 https://www.youtube.com/watch?v=JHrq-9Khh3g&feature=youtu.be
 
 -Bill of Materials:
-3 x ESP8266 MCU
 
+3 x ESP8266 MCU
 Micro-USB Cable
 5 x Servo Motor
 3 x Touch pen
