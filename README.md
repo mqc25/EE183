@@ -112,8 +112,7 @@ s += "<br><br><br>";
 ```
 int newsong1[]={<int>,...}; 				//	#of time to hit the drum at current pos
 int newsong2[]={<angle>,...};				//	angle of swing 1=120, 2 = 90, 3 = 45
-
-											// 	the two array must have same size
+						// 	the two array must have same size
 
 void playnewsong() // play newsong function		
 {
