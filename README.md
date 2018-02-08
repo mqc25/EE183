@@ -2,7 +2,7 @@
 Project Making Noise
 This tutorial will show you how to build musical network by using 3 ESP8266 MCU. One acts as control server and the reset is capable of various joint movement to fit your instrument need. 
 
-<img width="600" alt="Setup" src="https://ibb.co/cNmiac">
+<img width="600" alt="Setup" src="https://github.com/mqc25/EE183/blob/master/img/IMG_20180207_235736.jpg">
 
 ## The Demo:
 
@@ -31,9 +31,9 @@ The Node: has 2 or 3 servos. One serve as base to adjust the angle, the other to
 
 - Connect the circuit as shown below:
 
-<img width="600" alt="Setup" src="https://github.com/mqc25/EE183/blob/master/Servo1-Schematic.png">
+<img width="600" alt="Setup" src="https://github.com/mqc25/EE183/blob/master/img/Servo1-Schematic.png">
 
-<img width="600" alt="Setup" src="https://github.com/mqc25/EE183/blob/master/Servo2-Schematic.png">
+<img width="600" alt="Setup" src="https://github.com/mqc25/EE183/blob/master/img/Servo2-Schematic.png">
 
 - Use 1 NodeMCU leftover to set up server to control the rest.
 - Tie your choice of stick to the top motor.
