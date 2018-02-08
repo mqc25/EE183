@@ -18,9 +18,13 @@ Press CC to see our description of demo
 
 ## Bill of Materials:
 - 3 x ESP8266 MCU
-- Micro-USB Cable
+- Breadboard
+- Lots of Wires
+- Micro-USB Cables
 - 5 x Servo Motor
 - 3 x Touch pen
+- Touch sever
+- MPU-6000 Gyro-Accelerometer sensor
 - Instrument of choice (preferable touch interactive device)
 
 ## Basic functionality:
